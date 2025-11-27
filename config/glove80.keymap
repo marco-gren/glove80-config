@@ -20,6 +20,34 @@
 #define FACTORY_TEST 3
 
 / {
+    combos {
+        compatible = "zmk,combos";
+        
+        combo_ue {
+            timeout-ms = <50>;
+            key-positions = <23 13>; // U + E
+            bindings = <&kp RA(Y)>; // ü
+        };
+        
+        combo_ae {
+            timeout-ms = <50>;
+            key-positions = <21 13>; // A + E
+            bindings = <&kp RA(Q)>; // ä
+        };
+        
+        combo_oe {
+            timeout-ms = <50>;
+            key-positions = <24 13>; // O + E
+            bindings = <&kp RA(P)>; // ö
+        };
+        
+        combo_sz {
+            timeout-ms = <50>;
+            key-positions = <32 33>; // S + Z (on home row: Z + X since Z is left of S)
+            bindings = <&kp RA(S)>; // ß
+        };
+    };
+
     behaviors {
         // For the "layer" key, it'd nice to be able to use it as either a shift or a toggle.
         // Configure it as a tap dance, so the first tap (or hold) is a &mo and the second tap is a &to
