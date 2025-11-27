@@ -67,6 +67,38 @@
             tapping-term-ms = <200>;
             bindings = <&mo>, <&rgb_ug_status_macro>;
         };
+
+        opt_a: option_a {
+            compatible = "zmk,behavior-mod-morph";
+            label = "OPTION_A";
+            #binding-cells = <0>;
+            bindings = <&kp A>, <&umlaut_a>;
+            mods = <(MOD_LALT|MOD_RALT)>;
+        };
+
+        opt_o: option_o {
+            compatible = "zmk,behavior-mod-morph";
+            label = "OPTION_O";
+            #binding-cells = <0>;
+            bindings = <&kp O>, <&umlaut_o>;
+            mods = <(MOD_LALT|MOD_RALT)>;
+        };
+
+        opt_u: option_u {
+            compatible = "zmk,behavior-mod-morph";
+            label = "OPTION_U";
+            #binding-cells = <0>;
+            bindings = <&kp U>, <&umlaut_u>;
+            mods = <(MOD_LALT|MOD_RALT)>;
+        };
+
+        opt_s: option_s {
+            compatible = "zmk,behavior-mod-morph";
+            label = "OPTION_S";
+            #binding-cells = <0>;
+            bindings = <&kp S>, <&umlaut_s>;
+            mods = <(MOD_LALT|MOD_RALT)>;
+        };
     };
 
     macros {
@@ -113,6 +145,34 @@
                 = <&out OUT_BLE>,
                   <&bt BT_SEL 3>;
         };
+        umlaut_a: umlaut_a_macro {
+            label = "UMLAUT_A";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LALT &kp U &kp A>;
+        };
+
+        umlaut_o: umlaut_o_macro {
+            label = "UMLAUT_O";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LALT &kp U &kp O>;
+        };
+
+        umlaut_u: umlaut_u_macro {
+            label = "UMLAUT_U";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LALT &kp U &kp U>;
+        };
+
+        umlaut_s: umlaut_s_macro {
+            label = "UMLAUT_S";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LALT &kp S>;
+        };
+
     };
 
     keymap {
